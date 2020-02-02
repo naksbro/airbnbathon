@@ -15,13 +15,13 @@ public class DateUtils {
     }
 
     public static String currentDateTime(){
-        DateTimeFormatter date = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");
+        DateTimeFormatter date = DateTimeFormatter.ofPattern("mm/dd/yyyy");
         LocalDateTime now = LocalDateTime.now();
         return date.format(now);
     }
 
     public static String currentDatePlus(int plusDays){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("mm/dd/yyyy");
         LocalDate date = LocalDate.now().plusDays(plusDays);
         return formatter.format(date);
     }

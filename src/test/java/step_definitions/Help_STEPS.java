@@ -20,7 +20,7 @@ public class Help_STEPS {
     @Then("User Select first popular article")
     public void user_Select_first_popular_article() {
         Assert.assertEquals("Home - Airbnb Help Center", driver.getTitle());
-      //  Assert.assertEquals("Coronavirus information and extenuating circumstances policy".driver.getTaitle);
+      //   Assert.assertEquals("Coronavirus information and extenuating circumstances policy".driver.getTaitle);
     }
 
 }
