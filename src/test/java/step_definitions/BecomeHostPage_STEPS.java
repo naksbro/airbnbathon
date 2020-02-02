@@ -13,11 +13,4 @@ public class BecomeHostPage_STEPS {
 
 
 
-    @When("User navigates to {string} page")
-    public void user_navigates_to_page(String string) {
-        HomePage_impl homePage_impl=new HomePage_impl();
-        homePage_impl.getTitle();
-
-    }
-
 }
