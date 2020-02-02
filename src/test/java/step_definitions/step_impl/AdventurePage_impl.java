@@ -3,6 +3,7 @@ package step_definitions.step_impl;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.AdventurePage;
+import pages.BecomeHostPage;
 import pages.HelpHomePage;
 import util.Driver;
 import util.SeleniumUtils;
@@ -15,6 +16,7 @@ public class AdventurePage_impl {
     private static WebDriver driver = Driver.getDriver();
     AdventurePage adventure = new AdventurePage();
     HelpHomePage helpPage = new HelpHomePage();
+    BecomeHostPage hostPage = new BecomeHostPage();
 
     public void navigateToPage (String page) {
         switch (page.toLowerCase()) {
@@ -23,6 +25,9 @@ public class AdventurePage_impl {
                 break;
             case "help":
                 SeleniumUtils.click(helpPage.Help_btn);
+                break;
+            case "host a home":
+                SeleniumUtils.click(hostPage.Hostahome_btn);
                 break;
         }
     }
