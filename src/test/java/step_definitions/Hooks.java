@@ -9,10 +9,12 @@ public class Hooks {
     @Before
     public void beforeScenario(){
         Driver.getDriver();
+
     }
 
     @After
     public void afterScenario(){
         Driver.quitDriver();
+
     }
 }
