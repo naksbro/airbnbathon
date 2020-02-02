@@ -1,7 +1,7 @@
 @becomeHostPage
 
 Feature: becomeHostPage Testing
-
+  @smoke
   Scenario:Verify title of becomeHostPage
     Given  User opens home page
     When User navigates to "Host a Home" page
