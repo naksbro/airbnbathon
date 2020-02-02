@@ -14,6 +14,7 @@ public class NewUserInfo {
     private static String email;
     private static String password;
 
+
     Faker faker = new Faker(new Locale("en-US"));
 
     public String getFirstName() {

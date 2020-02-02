@@ -12,9 +12,16 @@ public class Hooks {
 
     }
 
+<<<<<<< HEAD
     @After
     public void afterScenario(){
         Driver.quitDriver();
 
     }
+=======
+//    @After
+//    public void afterScenario(){
+//        Driver.quitDriver();
+//    }
+>>>>>>> f053824cc8ce4ba7e9f16aecfbe74d77251d079c
 }
