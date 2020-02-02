@@ -15,7 +15,7 @@ public class BookPage_STEPS {
     BookPage bookPage = new BookPage();
     BookPage_impl bookPage_impl = new BookPage_impl();
 
-    @When("User enters {string}, checks in today, checks out in a week, and enters {string} guests")
+    @When("User enters {string}, checks in tomorrow, checks out in a week, and enters {string} guests")
     public void user_enters_checks_in_today_checks_out_in_week_and_enters_guests(String location, String guests) {
         bookPage_impl.bookNow(location,guests);
     }

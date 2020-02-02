@@ -17,7 +17,7 @@ public class BookPage_impl {
         SeleniumUtils.click(bookPage.checkOutBox);
         SeleniumUtils.click(bookPage.checkOut);
         SeleniumUtils.click(bookPage.guets);
-        for (int i = 0; i <= 4; i++) {
+        for (int i = 0; i < 4; i++) {
             SeleniumUtils.click(bookPage.addBtn);
         }
         bookPage.clickOut.click();
