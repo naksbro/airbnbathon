@@ -11,12 +11,6 @@ public class Help_STEPS {
     private static WebDriver driver = Driver.getDriver();
     HelpHomePage helpHomePage = new HelpHomePage();
 
-    @When("User navigate to {string} page")
-    public void user_navigate_to_page(String string) {
-      // helpHomePage.emailFiel
-
-    }
-
     @Then("User Select first popular article")
     public void user_Select_first_popular_article() {
         Assert.assertEquals("Home - Airbnb Help Center", driver.getTitle());
