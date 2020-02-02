@@ -7,4 +7,3 @@ Feature: help Page Test
     Then Verifies title is "Home - Airbnb Help Center"
     And User navigates to "First Article" page
     Then Verifies title of article
-
