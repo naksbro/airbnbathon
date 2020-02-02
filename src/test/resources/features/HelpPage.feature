@@ -1,6 +1,6 @@
 @helpPage
 Feature: help Page Test
-@helpPageT
+  @smoke
   Scenario: Verify text
     Given User opens home page
     When User navigates to "Help" page

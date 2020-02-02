@@ -14,8 +14,12 @@ public class Driver {
     public static final String propertyPath = "./src/test/resources/conf/configuration.properties";
 
     public static void initialize(String browser){
-        if (driver != null )
+        if (driver != null ){
+            System.out.println("Old Driver");
             return;
+        }
+
+        System.out.println("New Driver!");
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
@@ -45,14 +49,17 @@ public class Driver {
     }
 
     public static void quitDriver(){
-        if (driver!=null)
+        if (driver!=null){
             driver.quit();
+        }
+
         driver = null;
     }
 
     public static WebDriver getDriver(){
         if (driver != null)
             return driver;
+
         initialize(ConfigReader.readProperty("browser"));
         return driver;
     }
