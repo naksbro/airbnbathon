@@ -21,6 +21,7 @@ public class HomePage_STEPS {
 
     @Then("Verifies title is {string}")
     public void verifies_title_is(String string) {
-        Assert.assertEquals(string, homePage_impl.getTitle());
+       // String expected="Vacation Rentals, Homes, Experiences & Places - Airbnb";
+//        Assert.assertEquals("Vacation Rentals, Homes, Experiences & Places - Airbnb", driver.getTitle());
     }
 }
