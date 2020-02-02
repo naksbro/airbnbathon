@@ -10,7 +10,7 @@ import java.util.List;
 
 public class AdventurePage {
 
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     public AdventurePage(){
         PageFactory.initElements(driver, this);
     }

@@ -6,7 +6,7 @@ import util.Driver;
 import util.SeleniumUtils;
 
 public class BookPage_impl {
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     BookPage bookPage = new BookPage();
 
     public void bookNow(String location, String guest) {

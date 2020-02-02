@@ -8,7 +8,7 @@ import util.Driver;
 
 public class HelpHomePage {
 
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     public HelpHomePage() {
         PageFactory.initElements(driver, this);
     }

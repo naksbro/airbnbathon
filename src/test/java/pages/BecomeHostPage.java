@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import util.Driver;
 
 public class BecomeHostPage {
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     public BecomeHostPage(){
         PageFactory.initElements(driver,this);
     }

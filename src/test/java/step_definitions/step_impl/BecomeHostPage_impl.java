@@ -5,7 +5,7 @@ import pages.BecomeHostPage;
 import util.Driver;
 
 public class BecomeHostPage_impl {
-    private static WebDriver driver= Driver.getDriver();
+    private WebDriver driver= Driver.getDriver();
     BecomeHostPage becomeHostPage=new BecomeHostPage();
 
 

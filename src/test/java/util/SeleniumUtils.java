@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class SeleniumUtils{
-    private static WebDriver driver = Driver.getDriver();
+
 
     public static void sleep(long milliSeconds){
         try{
@@ -22,21 +22,25 @@ public class SeleniumUtils{
     }
 
     public static void waitForClickability(WebElement element){
+        WebDriver driver = Driver.getDriver();
         WebDriverWait explicitWait = new WebDriverWait(driver, SeleniumConstants.EXPLICIT_WAIT_TIME);
         explicitWait.until(ExpectedConditions.visibilityOf(element));
     }
     public static void waitForVisibilityOfAll(List<WebElement> list){
+        WebDriver driver = Driver.getDriver();
         WebDriverWait explicitWait = new WebDriverWait(driver, SeleniumConstants.EXPLICIT_WAIT_TIME);
         explicitWait.until(ExpectedConditions.visibilityOfAllElements(list));
     }
 
     public static void waitForVisibilityOfElement(WebElement element){
+        WebDriver driver = Driver.getDriver();
         WebDriverWait explicitWait = new WebDriverWait(driver, SeleniumConstants.EXPLICIT_WAIT_TIME);
         explicitWait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public static void waitForPageToLoad(){
-        ExpectedCondition<Boolean> pageLoadCondition = driver -> ((JavascriptExecutor)driver).executeScript("return document.readyState").equals(("complete"));
+        WebDriver driver = Driver.getDriver();
+        ExpectedCondition<Boolean> pageLoadCondition = js -> ((JavascriptExecutor)driver).executeScript("return document.readyState").equals(("complete"));
         WebDriverWait wait = new WebDriverWait(driver, SeleniumConstants.EXPLICIT_WAIT_TIME);
         wait.until(pageLoadCondition);
     }
@@ -44,7 +48,6 @@ public class SeleniumUtils{
     public static void click(WebElement element){
         waitForClickability(element);
         highlightElement(element);
-        SeleniumUtils.sleep(2000);
         element.click();
     }
 
@@ -61,6 +64,7 @@ public class SeleniumUtils{
     }
 
     public static void moveIntoView(WebElement element){
+        WebDriver driver = Driver.getDriver();
         try {
             ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
         }catch (Exception e){
@@ -70,6 +74,7 @@ public class SeleniumUtils{
     }
 
     public static void highlightElement(WebElement element){
+        WebDriver driver = Driver.getDriver();
         JavascriptExecutor js = (JavascriptExecutor)driver;
         //moveElementIntoView(element);
         for(int i = 0; i < 2; i++){

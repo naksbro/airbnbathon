@@ -10,7 +10,7 @@ import util.ConfigReader;
 import util.Driver;
 
 public class HomePage_STEPS {
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     HomePage homePage = new HomePage();
     HomePage_impl homePage_impl = new HomePage_impl();
 

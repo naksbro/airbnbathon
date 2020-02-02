@@ -8,7 +8,7 @@ import pages.HelpHomePage;
 import util.Driver;
 
 public class Help_STEPS {
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     HelpHomePage helpHomePage = new HelpHomePage();
 
     @Then("Verifies title of article")

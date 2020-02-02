@@ -11,7 +11,7 @@ import step_definitions.step_impl.HomePage_impl;
 import util.Driver;
 
 public class BookPage_STEPS {
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     BookPage bookPage = new BookPage();
     BookPage_impl bookPage_impl = new BookPage_impl();
 

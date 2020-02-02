@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import util.Driver;
 
 public class BookPage {
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     public BookPage(){
         PageFactory.initElements(driver, this);
     }

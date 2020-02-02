@@ -13,7 +13,7 @@ import java.util.List;
 
 public class AdventurePage_impl {
 
-    private static WebDriver driver = Driver.getDriver();
+    private WebDriver driver = Driver.getDriver();
     AdventurePage adventure = new AdventurePage();
     HelpHomePage helpPage = new HelpHomePage();
     BecomeHostPage hostPage = new BecomeHostPage();
