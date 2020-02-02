@@ -16,9 +16,4 @@ public class Hooks {
     public void afterScenario() {
         Driver.quitDriver();
     }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 044603294d32c23e5a43374369b843966c7cc50a
 }

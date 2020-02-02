@@ -44,6 +44,7 @@ public class SeleniumUtils{
     public static void click(WebElement element){
         waitForClickability(element);
         highlightElement(element);
+        SeleniumUtils.sleep(2000);
         element.click();
     }
 

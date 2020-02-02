@@ -11,6 +11,7 @@ public class HomePage_impl {
     HomePage homePage = new HomePage();
 
     public String getTitle(){
+        SeleniumUtils.sleep(1000);
         return driver.getTitle();
     }
     public String getWord(String str){
