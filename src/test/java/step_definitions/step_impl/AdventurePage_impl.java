@@ -25,6 +25,8 @@ public class AdventurePage_impl {
                 break;
             case "help":
                 SeleniumUtils.click(helpPage.Help_btn);
+                SeleniumUtils.waitForClickability(helpPage.HelpCenter_btn);
+                SeleniumUtils.click(helpPage.HelpCenter_btn);
                 break;
             case "first article":
                 SeleniumUtils.click(helpPage.ReadMore_btn);
