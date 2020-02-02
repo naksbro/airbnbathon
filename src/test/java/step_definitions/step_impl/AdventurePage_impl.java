@@ -3,6 +3,7 @@ package step_definitions.step_impl;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.AdventurePage;
+import pages.HelpHomePage;
 import util.Driver;
 import util.SeleniumUtils;
 
@@ -13,6 +14,7 @@ public class AdventurePage_impl {
 
     private static WebDriver driver = Driver.getDriver();
     AdventurePage adventure = new AdventurePage();
+    HelpHomePage helpPage = new HelpHomePage();
 
     public void navigateToPage (String page) {
         switch (page.toLowerCase()) {
@@ -20,6 +22,8 @@ public class AdventurePage_impl {
                 SeleniumUtils.click(adventure.adventures_Btn);
                 break;
             case "help":
+                SeleniumUtils.click(helpPage.Help_btn);
+                break;
         }
     }
 
