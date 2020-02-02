@@ -13,7 +13,12 @@ public class HomePage_impl {
     public String getTitle(){
         return driver.getTitle();
     }
+    public String getWord(String str){
+        return str;
+    }
+
+    }
 
 
 
-}
+

@@ -17,6 +17,7 @@ public class HomePage_STEPS {
     @Given("User opens home page")
     public void user_opens_home_page() {
         driver.get(ConfigReader.readProperty("url"));
+
     }
 
     @Then("Verifies title is {string}")
