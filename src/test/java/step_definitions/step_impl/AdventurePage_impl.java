@@ -26,6 +26,9 @@ public class AdventurePage_impl {
             case "help":
                 SeleniumUtils.click(helpPage.Help_btn);
                 break;
+            case "first article":
+                SeleniumUtils.click(helpPage.ReadMore_btn);
+                break;
             case "host a home":
                 SeleniumUtils.click(hostPage.Hostahome_btn);
                 break;
