@@ -1,10 +1,7 @@
 package step_definitions.step_impl;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 import pages.BookPage;
-import step_definitions.BookPage_STEPS;
-import util.DateUtils;
 import util.Driver;
 import util.SeleniumUtils;
 
@@ -14,10 +11,16 @@ public class BookPage_impl {
 
     public void bookNow(String location, String guest) {
         SeleniumUtils.sendKeys(bookPage.location, location);
-        SeleniumUtils.sendKeys(bookPage.checkIn, DateUtils.currentDateTime());
-        SeleniumUtils.sendKeys(bookPage.checkOut, DateUtils.currentDatePlus(7));
-        Select select = new Select(bookPage.guets);
-        select.selectByVisibleText(guest);
+        bookPage.clickOut.click();
+        SeleniumUtils.click(bookPage.checkInBox);
+        SeleniumUtils.click(bookPage.checkIn);
+        SeleniumUtils.click(bookPage.checkOutBox);
+        SeleniumUtils.click(bookPage.checkOut);
+        SeleniumUtils.click(bookPage.guets);
+        for (int i = 0; i <= 4; i++) {
+            SeleniumUtils.click(bookPage.addBtn);
+        }
+        bookPage.clickOut.click();
         SeleniumUtils.click(bookPage.searchBtn);
     }
 }

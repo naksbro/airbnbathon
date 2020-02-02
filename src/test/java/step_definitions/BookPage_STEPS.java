@@ -2,6 +2,7 @@ package step_definitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.BookPage;
 import pages.HomePage;
@@ -19,9 +20,8 @@ public class BookPage_STEPS {
         bookPage_impl.bookNow(location,guests);
     }
 
-    @Then("Verify search parameters are correct")
-    public void verify_search_paramaters_are_correct() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    @Then("Verify {string} is searched")
+    public void verify_is_searched(String location) {
+        Assert.assertEquals(bookPage.textVerif.getText(),"Explore The "+ location);
     }
 }
