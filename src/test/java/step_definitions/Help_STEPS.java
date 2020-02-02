@@ -11,10 +11,9 @@ public class Help_STEPS {
     private static WebDriver driver = Driver.getDriver();
     HelpHomePage helpHomePage = new HelpHomePage();
 
-    @Then("User Select first popular article")
-    public void user_Select_first_popular_article() {
-        Assert.assertEquals("Home - Airbnb Help Center", driver.getTitle());
-      //   Assert.assertEquals("Coronavirus information and extenuating circumstances policy".driver.getTaitle);
+    @Then("Verifies title of article")
+    public void verifies_title_of_article() {
+        Assert.assertEquals("Coronavirus information and extenuating circumstances policy", helpHomePage.Verifies_Coronavirus_Title.getText());
     }
 
 }

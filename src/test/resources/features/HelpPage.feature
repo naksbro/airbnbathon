@@ -3,7 +3,7 @@ Feature: help Page Test
 @helpPageT
   Scenario: Verify text
     Given User opens home page
-    When User navigate to "help" page
+    When User navigates to "Help" page
     Then Verifies title is "Home - Airbnb Help Center"
-    And User Select first popular article
-
+    And User navigates to "First Article" page
+    Then Verifies title of article
