@@ -42,6 +42,13 @@ public class BookPage {
     @FindBy (xpath = "//h3")
     public WebElement textVerif;
 
+    // Added by Mark
+    @FindBy (xpath = "//td[@aria-disabled='false']")
+    public WebElement today;
+
+    @FindBy (xpath = "(//td[@aria-disabled='false'])[7]")
+    public WebElement oneWK;
+
 
 
 }

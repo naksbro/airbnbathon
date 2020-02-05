@@ -13,9 +13,9 @@ public class BookPage_impl {
         SeleniumUtils.sendKeys(bookPage.location, location);
         bookPage.clickOut.click();
         SeleniumUtils.click(bookPage.checkInBox);
-        SeleniumUtils.click(bookPage.checkIn);
+        SeleniumUtils.click(bookPage.today);
         SeleniumUtils.click(bookPage.checkOutBox);
-        SeleniumUtils.click(bookPage.checkOut);
+        SeleniumUtils.click(bookPage.oneWK);
         SeleniumUtils.click(bookPage.guets);
         for (int i = 0; i < 4; i++) {
             SeleniumUtils.click(bookPage.addBtn);
